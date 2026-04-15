@@ -42,10 +42,6 @@ We envision a future where task management is truly sovereign, allowing individu
 - Leverages the high speed and low cost of the Stellar network.
 - Built using the modern Soroban Smart Contract SDK in Rust.
 
-## Contract Details
-
-- Contract Address: CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M
-  ![alt text](screenshot.png)
 
 ## Future Scope
 
