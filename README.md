@@ -1,61 +1,46 @@
-# Stellar Notes DApp
+# Stellar Task Tracker DApp
 
-**Stellar Notes DApp** - Blockchain-Based Decentralized Note-Taking System
+**Stellar Task Tracker DApp** - Blockchain-Based Decentralized Task & To-Do Management System
 
 ## Project Description
 
-Stellar Notes DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing personal notes directly on the blockchain. The contract ensures that your data is stored transparently and is only manageable through predefined smart contract functions, eliminating reliance on centralized database providers.
+Stellar Task Tracker DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing daily tasks, lab assignments, and project milestones directly on the blockchain. The contract ensures that your to-do lists are stored transparently and allows you to track the exact completion status of every task without relying on centralized database providers.
 
-The system allows users to create, view, and delete notes, leveraging the efficiency and security of the Stellar network. Each note is uniquely identified and stored within the contract's instance storage, ensuring data persistence and reliability.
+The system allows users to create tasks, mark them as completed, retrieve their task lists, and delete them when no longer needed. Each task is uniquely identified and stored within the contract's instance storage, ensuring reliable data persistence and seamless tracking of your progress.
 
 ## Project Vision
 
-Our vision is to revolutionize personal productivity in the digital age by:
+Our vision is to revolutionize personal and collaborative productivity in the digital age by:
 
-- **Decentralizing Data**: Moving note-taking from centralized servers to a global, distributed blockchain
-- **Ensuring Ownership**: Empowering users to have complete control and ownership over their digital thoughts and information
-- **Guaranteeing Immutability**: Providing a permanent, tamper-proof record of notes that cannot be altered or deleted by third parties
-- **Enhancing Privacy**: Leveraging blockchain security to protect personal information from unauthorized access
-- **Building Trustless Systems**: Creating a platform where data integrity is guaranteed by code, not by company promises
+- **Decentralizing Productivity**: Moving task management from centralized servers to a global, distributed blockchain.
+- **Ensuring Accountability**: Empowering users to have complete control and a permanent record of their completed tasks and milestones.
+- **Guaranteeing Immutability**: Providing a tamper-proof record of what tasks were added and completed, ensuring transparency in collaborative environments.
+- **Building Trustless Systems**: Creating a platform where task tracking is guaranteed by code, making it highly reliable for managing complex project deliverables or shared assignment progress.
 
-We envision a future where digital information is truly personal and sovereign, empowering individuals with complete autonomy over their digital assets.
+We envision a future where task management is truly sovereign, allowing individuals and teams to track their goals with complete autonomy and transparency.
 
 ## Key Features
 
-### 1. **Simple Note Creation**
+### 1. **Simple Task Creation**
+- Create tasks with a single function call.
+- Specify a `title` and detailed `description` for each task.
+- Automated ID generation and default "incomplete" status assignment.
 
-- Create notes with just one function call
-- Specify title and content for each note
-- Automated ID generation for unique identification
-- Persistent storage on the Stellar blockchain
+### 2. **Dynamic Status Tracking**
+- Dedicated functionality to mark tasks as completed (`is_completed: true`).
+- Maintain the task history rather than simply deleting it, allowing you to review your finished work.
 
-### 2. **Efficient Data Retrieval**
+### 3. **Efficient Data Retrieval**
+- Fetch all stored tasks in a single call to view your entire backlog and completed items.
+- Structured data representation (Boolean flags for completion) for easy frontend UI integration.
 
-- Fetch all stored notes in a single call
-- Structured data representation for easy frontend integration
-- Quick access to your entire note collection
-- Real-time synchronization with the blockchain state
-
-### 3. **Secure Deletion**
-
-- Remove specific notes using their unique IDs
-- Permanent removal from the contract storage
-- Clean and efficient storage management
-- Immediate update of the note list after deletion
-
-### 4. **Transparency and Security**
-
-- View all note activities on the blockchain
-- Blockchain-based verification of all storage actions
-- Immutable records of note creation and deletion
-- Protected against unauthorized modifications
+### 4. **Secure Deletion & Management**
+- Remove specific tasks using their unique IDs to keep your active workspace clean.
+- Immediate update of the task list after deletion.
 
 ### 5. **Stellar Network Integration**
-
-- Leverages the high speed and low cost of Stellar
-- Built using the modern Soroban Smart Contract SDK
-- Scalable architecture for growing note collections
-- Interoperable with other Stellar-based services
+- Leverages the high speed and low cost of the Stellar network.
+- Built using the modern Soroban Smart Contract SDK in Rust.
 
 ## Contract Details
 
@@ -65,37 +50,19 @@ We envision a future where digital information is truly personal and sovereign, 
 ## Future Scope
 
 ### Short-Term Enhancements
-
-1. **Note Encryption**: Support for end-to-end encryption of note content for enhanced privacy
-2. **Category Management**: Add tags and categories to organize notes efficiently
-3. **Rich Text Support**: Extend support beyond plain text to include Markdown and formatted content
-4. **Search Functionality**: Implement advanced search filters for large note collections
+1. **Due Dates & Deadlines**: Add timestamp integration to track when a task is due (e.g., for weekly lab reports or project submissions).
+2. **Priority Levels**: Introduce flags for High, Medium, and Low priority tasks.
+3. **Task Categorization**: Add tags to separate different subjects, projects, or personal chores.
 
 ### Medium-Term Development
-
-5. **Collaborative Notes**: Implement multi-signature requirements for shared or collaborative note-taking
-   - Shared access for multiple addresses
-   - Permission-based editing and viewing
-   - Version history tracking
-6. **Notification System**: Off-chain bridge to alert users of new updates or shared notes
-7. **Asset Attachment**: Capability to attach digital assets or tokens to specific notes
-8. **Inter-Contract Integration**: Allow other smart contracts to interact with and store data in the notes contract
+4. **Collaborative Task Assignment**: Allow tasks to be assigned to specific Stellar public keys so team members can share a single contract to manage group work.
+5. **Progress Metrics**: Introduce percentage-based progress tracking instead of just a simple boolean (true/false) completion status.
+6. **Notification System**: Off-chain bridge to alert users when a shared task is marked as complete.
 
 ### Long-Term Vision
-
-9. **Cross-Chain Synchronization**: Extend note storage to multiple blockchain networks
-10. **Decentralized UI Hosting**: Host the frontend on IPFS or similar decentralized platforms
-11. **AI-Powered Summarization**: Optional integration with AI to help users summarize their notes
-12. **Privacy Layers**: Implement zero-knowledge proofs for completely private note content
-13. **DAO Governance**: Community-driven protocol improvements and feature prioritization
-14. **Identity Management**: Integration with decentralized identity (DID) systems for user management
-
-### Enterprise Features
-
-15. **Corporate Documentation**: Adapt the system for secure corporate record-keeping
-16. **Immutable Logging**: Create time-locked logs for audit purposes
-17. **Automated Reporting**: Automatic note triggers for periodic reporting
-18. **Multi-Language Support**: Expand accessibility with internationalization
+7. **Bounty & Reward System**: Integrate token payouts when specific tasks are marked as completed (useful for DAO bounties or incentivized team projects).
+8. **Decentralized UI Hosting**: Host the frontend dashboard on IPFS or similar decentralized platforms.
+9. **Cross-Contract Triggers**: Allow task completion to automatically trigger events in other smart contracts.
 
 ---
 
@@ -107,12 +74,12 @@ We envision a future where digital information is truly personal and sovereign, 
 
 ## Getting Started
 
-Deploy the smart contract to Stellar's Soroban network and interact with it using the three main functions:
+Deploy the smart contract to Stellar's Soroban network and interact with it using these main functions:
 
-- `create_note()` - Create a new note with a title and content
-- `get_notes()` - Retrieve all stored notes from the contract
-- `delete_note()` - Remove a specific note by its ID
+- `create_task()` - Add a new task to your list with a title and description.
+- `get_tasks()` - Retrieve all stored tasks and view their current completion status.
+- `complete_task()` - Update a specific task's status to completed using its ID.
+- `delete_task()` - Permanently remove a specific task by its ID.
 
 ---
-
-**Stellar Notes DApp** - Securing Your Thoughts on the Blockchain
+**Stellar Task Tracker DApp** - Securing Your Productivity on the Blockchain
